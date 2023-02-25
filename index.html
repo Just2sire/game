@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Le nombre mystère</title>
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" href="css/all.css">
+    </head>
+    <body class="bg-secondary ">
+        <div class="container-fluid pt-3">
+            <div class="container-fluid bg-dark text-light rounded py-5">
+                <div class="row">
+                    <h1 class="text-center top text-warning text-decoration-underline mb-4">Bienvenue dans le jeu mystère</h1>                  
+                    <div class="col">
+                        <h2 class="texte-start">
+                            Le principe du jeu
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <p>Le principe du jeu est assez simple.Le premier joueur choisi un nombre au hasard. <br>
+                    <p>Le deuxieme joueur doit trouver le nombre choisi au hasard par le joueur précédent. <br>
+                    Sachant que ce nombre est compris entre <b>1</b> et <b>100</b>.</p>
+                </div>
+                <div class="col-lg-6 offset-lg-3 mt-4">
+                    <input type="number" placeholder="Entrez une valeur..." class="text-dark text-center form-control" id="input1" data-sb-can-submit="no" data-sb-validations="required">
+                    <div class="invalid-feedback text-center d-none h6" data-sb-feedback="number:required" id="invalid1">Un nombre est requis.</div>
+                    <div class="invalid-feedback text-center d-none h6" data-sb-feedback="number:number" id="invalid2">Nombre invalide.</div>
+                </div>
+                <div class="col-lg-6 offset-3 mt-4 mb-3">
+                    <div class="text-center d-none h5" id="txt">Veuillez devinez le nombre</div>
+                    <input type="number" placeholder="Entrez votre choix ici..." class="text-dark d-none text-center rounded form-control" id="input2" data-sb-can-submit="no" data-sb-validations="required">
+                    <div class="invalid-feedback text-center d-none h6" data-sb-feedback="number:required" id="invalid3">Un nombre est requis.</div>
+                    <div class="invalid-feedback text-center d-none h6" data-sb-feedback="number:number" id="invalid4">Nombre invalide.</div>
+                </div>
+                <div class="col-lg-2 offset-5 mt-5">
+                    <button type="button" class="btn btn-success d-none btn-outline-warning w-100" id="button2">VALIDER</button>
+                </div>
+                <div class="col-lg-2 offset-5 mt-5">
+                    <button type="button" class="btn btn-success btn-outline-warning w-100" id="button" onclick="getValue()">COMMENCER</button>
+                </div>
+                <div id="answer" class="col-lg-6 offset-lg-3 rounded text-dark h2 mt-3 text-center bg-light">
+                    
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
